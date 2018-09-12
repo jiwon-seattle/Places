@@ -12,5 +12,17 @@ namespace Places.Controllers
     {
       return View();
     }
+    [HttpPost("/places")]
+    public ActionResult Create()
+    {
+      string cityName = Request.Form["cityName"]
+      Place place = new Place(cityName);
+      List<Place> allPlaces = Place.GetInstances();
+      return View("../Home/Index", allPlaces);
+
+      // Model = list of places
+      // return View("../Home/Index", place);
+      // Model = a place
+    }
   }
 }
