@@ -2,7 +2,10 @@
 <ul>
   @foreach (Places.Models.Place place in Model)
   {
-    <li>@place.GetCityName()</li>
+    <li><a href="/places/@place.GetId()">@place.GetCityName()</a></li>
   }
 </ul>
 <a href="/places/new">Add a new place</a>
+<form action="/places/delete" method="post">
+  <button type="submit">Delete all places</button>  
+</form>
