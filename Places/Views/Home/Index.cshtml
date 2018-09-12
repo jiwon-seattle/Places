@@ -1,0 +1,7 @@
+<h1>Welcome to the places I have been.</h1>
+<ul>
+  @foreach (Places.Models.Place place in Model)
+  {
+    <li>@place.GetCityName()</li>
+  }
+</ul>
