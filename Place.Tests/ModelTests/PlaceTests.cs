@@ -7,7 +7,7 @@ using Places.Models;
 namespace Places.Tests
 {
     [TestClass]
-    public class HomeControllerTest
+    public class PlaceTests
     {
     }
 }
