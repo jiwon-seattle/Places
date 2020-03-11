@@ -9,5 +9,6 @@ namespace Places.Tests
     [TestClass]
     public class PlaceTests
     {
+        
     }
 }

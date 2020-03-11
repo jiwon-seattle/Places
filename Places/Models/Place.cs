@@ -10,12 +10,13 @@ namespace Places.Models
     public string CityDescription { get; set;}
     public string Companions { get; set; }
     public int Id { get; }
-    public Place (string cityName, string cityDescription, string Companions)
+    public Place (string cityName, string cityDescription, string companions)
     {
       CityName = cityName;
       CityDescription = cityDescription;
-      Id = _instances.Count;
+      Companions = companions
       _instances.Add(this);
+      Id = _instances.Count;
     }
 
     public static List<Place> GetAll() {
